@@ -16,8 +16,8 @@ void loop(){
   previousState = currentState;
   currentState = digitalRead(sensorPin);
 
-  if (previousState == LOW and currentState == HIGH){
-    Serial.println("Ruch");
+  if (previousState == HIGH and currentState == LOW){
+    Serial.println("Sound detected");
     digitalWrite(ledPin,HIGH);
     delay(500);
     digitalWrite(ledPin,LOW);
